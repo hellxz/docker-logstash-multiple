@@ -1,0 +1,9 @@
+version: "3"
+services:
+    logstash-1:
+        image: logstash:7.1.0
+        container_name: logstash-1
+        volumes:
+            - ${LOGSTASH_CONFIG_DIR}/logstash.conf:/usr/share/logstash/pipeline/logstash.conf:rw
+            - ${LOGSTASH_CONFIG_DIR}/logstash.yml:/usr/share/logstash/config/logstash.yml:rw
+        network_mode: "host"

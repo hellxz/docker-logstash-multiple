@@ -1,0 +1,7 @@
+# set now host ip to http.host
+http.host: 10.2.114.110
+# set the es-tribe-node host. let logstash monitor the es.
+xpack.monitoring.elasticsearch.hosts:
+- http://10.2.114.110:9204
+# enable or disable the logstash monitoring the es.
+xpack.monitoring.enabled: true
